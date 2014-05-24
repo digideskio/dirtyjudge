@@ -1,0 +1,284 @@
+object TestEditor2: TTestEditor2
+  Left = 638
+  Height = 480
+  Top = 291
+  Width = 640
+  Caption = 'TestEditor2'
+  ChildSizing.TopBottomSpacing = 5
+  ChildSizing.VerticalSpacing = 5
+  ClientHeight = 480
+  ClientWidth = 640
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.2.0.3'
+  object Panel1: TPanel
+    Left = 0
+    Height = 32
+    Top = 5
+    Width = 640
+    Align = alTop
+    BevelOuter = bvNone
+    ChildSizing.HorizontalSpacing = 5
+    ClientHeight = 32
+    ClientWidth = 640
+    TabOrder = 0
+    object ComboBox1: TComboBox
+      Left = 0
+      Height = 32
+      Top = 0
+      Width = 608
+      Align = alClient
+      ItemHeight = 0
+      OnEditingDone = ComboBox1EditingDone
+      TabOrder = 0
+      Text = 'ComboBox1'
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 613
+      Height = 32
+      Top = 0
+      Width = 27
+      Align = alRight
+      Caption = '...'
+      OnClick = SpeedButton1Click
+    end
+  end
+  object FileListBox: TListBox
+    Left = 0
+    Height = 218
+    Top = 42
+    Width = 640
+    Align = alClient
+    ItemHeight = 0
+    MultiSelect = True
+    ScrollWidth = 638
+    TabOrder = 1
+    TopIndex = -1
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 163
+    Top = 312
+    Width = 640
+    Align = alBottom
+    Caption = 'Danh sách input, output'
+    ChildSizing.TopBottomSpacing = 5
+    ChildSizing.VerticalSpacing = 5
+    ClientHeight = 144
+    ClientWidth = 636
+    TabOrder = 4
+    object Panel2: TPanel
+      Left = 0
+      Height = 97
+      Top = 5
+      Width = 636
+      Align = alClient
+      ChildSizing.HorizontalSpacing = 5
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclTopToBottomThenLeftToRight
+      ClientHeight = 97
+      ClientWidth = 636
+      TabOrder = 0
+      object InputListBox: TListBox
+        Left = 0
+        Height = 97
+        Top = 0
+        Width = 316
+        ItemHeight = 0
+        OnSelectionChange = InputListBoxSelectionChange
+        ScrollWidth = 314
+        TabOrder = 0
+        TopIndex = -1
+      end
+      object OutputListBox: TListBox
+        Left = 321
+        Height = 97
+        Top = 0
+        Width = 315
+        ItemHeight = 0
+        ScrollWidth = 313
+        TabOrder = 1
+        TopIndex = -1
+      end
+    end
+    object Panel4: TPanel
+      Left = 0
+      Height = 32
+      Top = 107
+      Width = 636
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 32
+      ClientWidth = 636
+      TabOrder = 1
+      object SortTestButton: TButton
+        Left = 0
+        Height = 32
+        Top = 0
+        Width = 100
+        Align = alLeft
+        Caption = 'Sắp xếp'
+        OnClick = SortTestButtonClick
+        PopupMenu = PopupMenu1
+        TabOrder = 0
+      end
+      object Button2: TButton
+        Left = 561
+        Height = 32
+        Top = 0
+        Width = 75
+        Align = alRight
+        Caption = 'OK'
+        ModalResult = 1
+        TabOrder = 2
+      end
+      object Button3: TButton
+        Left = 486
+        Height = 32
+        Top = 0
+        Width = 75
+        Align = alRight
+        Caption = 'Huỷ'
+        ModalResult = 2
+        TabOrder = 1
+      end
+      object DeleteTestButton: TButton
+        Left = 100
+        Height = 32
+        Top = 0
+        Width = 100
+        Align = alLeft
+        Caption = 'Xoá'
+        OnClick = DeleteTestButtonClick
+        TabOrder = 3
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 32
+    Top = 265
+    Width = 640
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 32
+    ClientWidth = 640
+    TabOrder = 2
+    object SortFileButton: TButton
+      Left = 0
+      Height = 32
+      Top = 0
+      Width = 100
+      Align = alLeft
+      Caption = 'Sắp xếp'
+      OnClick = SortFileButtonClick
+      PopupMenu = PopupMenu2
+      TabOrder = 0
+    end
+    object AcceptFileButton: TButton
+      Left = 100
+      Height = 32
+      Top = 0
+      Width = 150
+      Align = alLeft
+      Caption = 'Thêm vào bộ test'
+      OnClick = AcceptFileButtonClick
+      TabOrder = 1
+    end
+    object DeleteFileButton: TButton
+      Left = 250
+      Height = 32
+      Top = 0
+      Width = 100
+      Align = alLeft
+      Caption = 'Xoá'
+      OnClick = DeleteFileButtonClick
+      TabOrder = 2
+    end
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 302
+    Width = 640
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object PopupMenu1: TPopupMenu
+    left = 40
+    top = 384
+    object MenuItem1: TMenuItem
+      Caption = 'Theo thứ tự từ điển'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Độ dài trước, thứ tự từ điển sau'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Theo tổng kích thước input, output'
+      OnClick = MenuItem1Click
+    end
+  end
+  object PopupMenu2: TPopupMenu
+    left = 40
+    top = 208
+    object MenuItem4: TMenuItem
+      Caption = 'Theo thứ tự từ điển'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Theo độ dài trước, thứ tự từ điển sau'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Loại bỏ phần số, sau đó sắp xếp'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem7: TMenuItem
+      Caption = 'Theo đuôi file'
+      OnClick = MenuItem4Click
+    end
+  end
+  object PopupMenu3: TPopupMenu
+    left = 136
+    top = 208
+    object MenuItem8: TMenuItem
+      Caption = 'Thêm vào danh sách input'
+      OnClick = MenuItem8Click
+    end
+    object MenuItem9: TMenuItem
+      Caption = 'Thêm vào danh sách output'
+      OnClick = MenuItem8Click
+    end
+    object MenuItem10: TMenuItem
+      Caption = 'Vào input, output, input, output,...'
+      OnClick = MenuItem8Click
+    end
+    object MenuItem11: TMenuItem
+      Caption = 'Vào output, input, output, input,...'
+      OnClick = MenuItem8Click
+    end
+  end
+  object PopupMenu4: TPopupMenu
+    left = 136
+    top = 384
+    object MenuItem12: TMenuItem
+      Caption = 'Xoá input đã chọn'
+      OnClick = MenuItem12Click
+    end
+    object MenuItem13: TMenuItem
+      Caption = 'Xoá output đã chọn'
+      OnClick = MenuItem12Click
+    end
+    object MenuItem14: TMenuItem
+      Caption = 'Xoá input và output đã chọn'
+      OnClick = MenuItem12Click
+    end
+  end
+end

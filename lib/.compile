@@ -1,0 +1,132 @@
+./segment_tree_2d.cpp: In member function ‘void node1::update(int, long long int)’:
+./segment_tree_2d.cpp:26:14: error: ‘expand’ was not declared in this scope
+     expand(id);
+              ^
+./segment_tree_2d.cpp:27:10: error: too few arguments to function ‘std::ios_base& std::left(std::ios_base&)’
+     left().update(u, Value);
+          ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:916:3: note: declared here
+   left(ios_base& __base)
+   ^
+./segment_tree_2d.cpp:28:11: error: too few arguments to function ‘std::ios_base& std::right(std::ios_base&)’
+     right().update(u, Value);
+           ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:924:3: note: declared here
+   right(ios_base& __base)
+   ^
+./segment_tree_2d.cpp:29:14: error: no matching function for call to ‘node1::update(int&)’
+     update(id);
+              ^
+./segment_tree_2d.cpp:29:14: note: candidate is:
+./segment_tree_2d.cpp:23:8: note: void node1::update(int, long long int)
+   void update(int u, long Value){
+        ^
+./segment_tree_2d.cpp:23:8: note:   candidate expects 2 arguments, 1 provided
+./segment_tree_2d.cpp: In member function ‘long long int node1::gcd_range(int, int)’:
+./segment_tree_2d.cpp:34:20: error: too few arguments to function ‘std::ios_base& std::left(std::ios_base&)’
+     long G1 = left().gcd_range(L, R);
+                    ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:916:3: note: declared here
+   left(ios_base& __base)
+   ^
+./segment_tree_2d.cpp:35:21: error: too few arguments to function ‘std::ios_base& std::right(std::ios_base&)’
+     long G2 = right().gcd_range(L, R);
+                     ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:924:3: note: declared here
+   right(ios_base& __base)
+   ^
+./segment_tree_2d.cpp: In member function ‘void node2::update(int, int, long long int)’:
+./segment_tree_2d.cpp:44:25: error: ‘child’ was not declared in this scope
+     if (ll==rr) { child().update(u1, Value); return; }
+                         ^
+./segment_tree_2d.cpp:45:29: error: ‘expand’ was not declared in this scope
+     if (!Left[id]) expand(id);
+                             ^
+./segment_tree_2d.cpp:46:10: error: too few arguments to function ‘std::ios_base& std::left(std::ios_base&)’
+     left().update(u, u1, Value);
+          ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:916:3: note: declared here
+   left(ios_base& __base)
+   ^
+./segment_tree_2d.cpp:47:11: error: too few arguments to function ‘std::ios_base& std::right(std::ios_base&)’
+     right().update(u, u1, Value);
+           ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:924:3: note: declared here
+   right(ios_base& __base)
+   ^
+./segment_tree_2d.cpp:48:11: error: ‘child’ was not declared in this scope
+     child().assign(left().child() + right().child());
+           ^
+./segment_tree_2d.cpp:48:25: error: too few arguments to function ‘std::ios_base& std::left(std::ios_base&)’
+     child().assign(left().child() + right().child());
+                         ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:916:3: note: declared here
+   left(ios_base& __base)
+   ^
+./segment_tree_2d.cpp:48:43: error: too few arguments to function ‘std::ios_base& std::right(std::ios_base&)’
+     child().assign(left().child() + right().child());
+                                           ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:924:3: note: declared here
+   right(ios_base& __base)
+   ^
+./segment_tree_2d.cpp: In member function ‘long long int node2::gcd_range(int, int)’:
+./segment_tree_2d.cpp:53:20: error: too few arguments to function ‘std::ios_base& std::left(std::ios_base&)’
+     long G1 = left().gcd_range(L, R);
+                    ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:916:3: note: declared here
+   left(ios_base& __base)
+   ^
+./segment_tree_2d.cpp:54:21: error: too few arguments to function ‘std::ios_base& std::right(std::ios_base&)’
+     long G2 = right().gcd_range(L, R);
+                     ^
+In file included from /usr/include/c++/4.8/ios:42:0,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ./segment_tree_2d.cpp:2:
+/usr/include/c++/4.8/bits/ios_base.h:924:3: note: declared here
+   right(ios_base& __base)
+   ^
+./segment_tree_2d.cpp: At global scope:
+./segment_tree_2d.cpp:40:1: error: new types may not be defined in a return type
+ struct node2 {
+ ^
+./segment_tree_2d.cpp:40:1: note: (perhaps a semicolon is missing after the definition of ‘node2’)
+./segment_tree_2d.cpp:59:6: error: ‘::main’ must return ‘int’
+ main(){
+      ^
